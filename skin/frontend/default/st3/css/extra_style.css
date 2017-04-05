@@ -7,6 +7,11 @@ h3 { margin-top: 0; }
 ul,
 ol { margin: 0; }
 p { margin: 0; }
+a             { color:#000000;  text-decoration:none;}
+a:hover       { text-decoration:none; color:#bfbfbf; }
+:focus        { outline:0; text-decoration: none; }
+a:focus       {outline:0; text-decoration: none; color: #bfbfbf;}
+
 .main-container label { font-weight: normal; }
 .page .label,
 .ajaxcart .label { color: inherit; font-size: 100%; border-radius: 0; display: inline-block; text-align: left; white-space: normal; line-height: normal; }
@@ -29,6 +34,7 @@ span.toggle { display: none; }
 
 body .header .header-border { box-shadow: none; }
 /*********  Top Header  ***********/
+.small-logo{ width: 200px; margin: 0 auto;  }
 .top-bar { background: #191919; }
 .header-panel-left { float: left; }
 .header-panel-right { float: right; }
@@ -87,6 +93,12 @@ body .header .header-border { box-shadow: none; }
 .products-grid .item-inner .product-item-info .product-item-details .price-box { border-bottom: 1px solid #ebebeb; margin-bottom: 0; padding: 10px 0 20px; }
 .products-grid .item-inner .product-item-info .box-hover { border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-right: 0px solid transparent; height: 52px; padding: 0 15px; position: relative; }
 .products-grid .item-inner .product-item-info .box-hover .actions-primary { float: left; margin: 0; position: relative; text-align: center; width: 60%; }
+
+button.button > span:after, .but-link:after { background: none!important;}
+.products-grid .product-name a,
+.products-list .product-name a {font-size: 14px; font-weight: bold; color: #303c4b;}
+.products-grid .product-name a:hover,
+.products-list .product-name a:hover {color:#bfbfbf;}
 
 .products-grid .item-inner .product-item-info .box-hover .actions-primary .action { background: rgba(0, 0, 0, 0) none repeat scroll 0 0; border: medium none; color: #252525; display: inline-block; height: 50px; padding: 0; position: relative; text-align: center; width: 100%; }
 .products-grid .item-inner .product-item-info .box-hover .actions-primary .action span { font-family: "Poppins", sans-serif; font-size: 12px; font-weight: 400; text-transform: capitalize; vertical-align: top; }
@@ -236,3 +248,29 @@ button.button:hover span > span{ border:1px solid #454545; background: #454545!i
 .footer-widget-wrapper button.button > span > span:hover,
 .footer-widget-wrapper button.button > span > span::after,
 .footer-widget-wrapper button.button:hover span > span{ border:1px solid #454545; background: #454545!important; color:#fff!important; }
+/*********  Menu ***********/
+.nav-sections .grid-full > li > .level-top{
+    background: #191919;
+}
+.nav-sections .grid-full .catagory_children .catagory_children li a span,
+.nav-sections .nav .grid-full li.first ul li.nav-1-1 .catagory_children span{ color:#fff!important; }
+
+/*.nav-sections .grid-full li li li a span{ color:red!important; }
+.nav-sections .grid-full li li li a { color:green!important; }*/
+.nav-sections .grid-full ul.level li a{color:#fff!important;}
+.nav-sections .grid-full ul.level li ul.level1 li a span{color:#777!important;}
+.nav-sections .grid-full ul.level li ul.level1 li a span:hover,
+.nav-sections .grid-full ul.level li ul.level1 li a:hover span,
+.nav-sections .grid-full ul.level li ul.level1 li:hover a
+{color:#fff!important; background: none!important}
+
+
+.nav-sections .grid-full .grid-full-home-link:hover a, .nav-sections .ps-static .grid-full .level.over > a, 
+.nav-sections .grid-full .level.active > a, .nav-sections .grid-full .level:hover a, .nav-sections .grid-full .level.active:hover a{ color:#a2a2a2; }
+
+
+.grid-full .level.over > a span,
+.grid-full .level.over > a:hover span,
+.grid-full .level.active > a span{color:#a2a2a2;}
+.grid-full > .level.parent > li > a::before,
+.grid-full > .level.active > li > a::before {background: none!important}
