@@ -26,18 +26,18 @@
 ?>
 <?php if(count($this->getItemCollection()->getItems())): ?>
 
-  
+
      <?php if (count($this->getItemCollection()->getItems()) > 3) 
       {
         $carous='up-sell-carousel';
         $upSellControl = '<a class="carousel-prev fa fa-angle-double-left" href="#"></a>
         <a class="carousel-next fa fa-angle-double-right" href="#"></a>';
-        } else 
-        {  
+        } else
+        {
           $upSellControl = "";
           $carous='up-sell-carousel-none';
          }
-      
+
       ?>
 <div class="box-collateral box-up-sell">
     <h2><?php echo $this->__('You may also be interested in the following product(s)') ?></h2>
