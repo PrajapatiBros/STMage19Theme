@@ -52,13 +52,14 @@ foreach ($children as $cat) {
   endif;
 }
 ?>
-<ul class="product-tabs">
+<div class="product-tabs-section"><div class="row">
+<div class="tab-header"><ul class="product-tabs">
     <?php foreach ($package_category as $_index => $_tab): ?>
         <?php //if($this->getChildHtml($_tab['alias'])): ?>
             <li id="product_tabs_<?php echo $_tab['alias'] ?>" class="<?php echo !$_index?' active first':(($_index==count($package_category)-1)?' last':'')?>"><a href="#"><?php echo $_tab['title']?></a></li>
         <?php //endif; ?>
     <?php endforeach; ?>
-</ul>
+</ul></div>
 <?php foreach ($package_category as $_index => $_tab): ?>
     <?php //if($this->getChildHtml($_tab['alias'])): ?>
         <div class="product-tabs-content" id="product_tabs_<?php echo $_tab['alias'] ?>_contents">
@@ -123,7 +124,7 @@ foreach ($children as $cat) {
 
 				</div>
     <?php //endif; ?>
-<?php endforeach; ?>
+<?php endforeach; ?></div></div>
 <script type="text/javascript">
 //<![CDATA[
 Varien.Tabs = Class.create();
