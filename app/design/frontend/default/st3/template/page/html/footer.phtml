@@ -26,18 +26,18 @@
 ?>
 
 <?php echo $this->getChildHtml('aw_blog_footer') ?>
-<?php if(Mage::getSingleton('cms/page')->getIdentifier() == 'home'  && Mage::app()->getFrontController()->getRequest()->getRouteName() == 'cms' ) :  ?>
+<?php /*if(Mage::getSingleton('cms/page')->getIdentifier() == 'home'  && Mage::app()->getFrontController()->getRequest()->getRouteName() == 'cms' ) :  ?>
 	<?php //echo $this->getChildHtml('tm_googlemap_embed') ?>
-<?php endif;  ?>
+<?php endif;*/  ?>
 
 
 
-<div class="footer-widget-wrapper">
+<!--<div class="footer-widget-wrapper">
 	<div class="container">
-			
-		<?php //echo $this->getLayout()->createBlock('cms/block')->setBlockId('homepage-multi-block')->toHtml() ?>	
-	</div>	
-</div>	
+
+		<?php //echo $this->getLayout()->createBlock('cms/block')->setBlockId('homepage-multi-block')->toHtml() ?>
+	</div>
+</div>	-->
 
 
 <div class="footer-container">
@@ -51,7 +51,7 @@
 					</div>
 					  <p id="back-top"><a href="#top"><span><?php echo $this->__('Top') ?></span></a> </p>
 					  <div class="footer-cols-wrapper">
-						<div class="footer-col">			
+						<div class="footer-col">
 							<h4><?php echo $this->__('Information') ?></h4>
 							<div class="footer-col-content">
 								<?php echo $this->getChildHtml('cms_footer_links') ?>
@@ -67,7 +67,7 @@
 						<address><?php echo $this->getCopyright() ?></address>
 						<div class="clear"></div>
 						<?php echo $this->getChildHtml('store_switcher') ?>
-							<?php $current_page = Mage::app()->getFrontController()->getRequest()->getRouteName(); 
+							<?php $current_page = Mage::app()->getFrontController()->getRequest()->getRouteName();
 								if ($current_page == 'cms'):
 									echo 'More <a rel="nofollow" href="http://www.templatemonster.com/category/apparel-magento-themes/" target="_blank">Apparel Magento Themes at TemplateMonster.com</a>';
 								endif;
@@ -78,5 +78,3 @@
 		</div>
 	</div>
 </div>
-
-

@@ -9,14 +9,14 @@
 
 <div class="footer-widget-wrapper">
         <div class="container">
-                <div class="row"> 
+                <div class="row">
                         <!-- NEW PRODUCTS LIST START -->
                         <div class="col-md-4 col-sm-12  col-xs-12">
                                 <div class="block block-list block-viewed">
                                         <div class="block-title"> <strong><span><?php echo $this->__('New Products') ?></span></strong> </div>
                                         <div class="block-content">
-                                                <?php $products = $this->getNewCollection(); $i=0; ?>
-                                                <?php if ((0 < $products->getSize()) && ($i<$item_count) ) { $i++; ?>
+                                                <?php $products = $this->getNewCollection(); ?>
+                                                <?php if (0 < $products->getSize()) { ?>
                                                 <div class="bestseller-wrapper">
                                                         <?php foreach ($products as $p) { ?>
                                                         <div class="inner-item">
@@ -37,20 +37,20 @@
                                                         </div>
                                                         <?php } ?>
                                                 </div>
-                                        </div>
-                                        <?php } ?>
+                                            </div>
+                                            <?php } ?>
                                 </div>
                         </div>
-                        
-                        <!-- NEW PRODUCTS LIST END --> 
-                        
+
+                        <!-- NEW PRODUCTS LIST END -->
+
                         <!-- BEST SELLERS LIST START -->
                         <div class="col-md-4 col-sm-12  col-xs-12">
                                 <div class="block block-list block-viewed">
                                         <div class="block-title"> <strong><span><?php echo $this->__('Best Sellers') ?></span></strong> </div>
                                         <div class="block-content">
-                                                <?php $products = $this->getSpecialsCollection(); $i=0; ?>
-                                                <?php if (0 < $products->getSize() && ($i<$item_count)) { $i++; ?>
+                                                <?php $products = $this->getSpecialsCollection(); ?>
+                                                <?php if (0 < $products->getSize()) { ?>
                                                 <div class="bestseller-wrapper">
                                                         <?php foreach ($products as $p) { ?>
                                                         <div class="inner-item">
@@ -75,15 +75,15 @@
                                         </div>
                                 </div>
                         </div>
-                        <!-- BEST SELLERS LIST END --> 
-                        
+                        <!-- BEST SELLERS LIST END -->
+
                         <!-- SPECIAL LIST START -->
                         <div class="col-md-4 col-sm-12  col-xs-12 ">
                                 <div class="block block-list block-viewed">
                                         <div class="block-title"> <strong><span><?php echo $this->__('Specials') ?></span></strong> </div>
                                         <div class="block-content"  style="display: none;">
-                                                <?php $products = $this->getSpecialsCollection(); $i=0; ?>
-                                                <?php if (0 < $products->getSize() && ($i<$item_count)) {  $i++; ?>
+                                                <?php $products = $this->getSpecialsCollection(); ?>
+                                                <?php if (0 < $products->getSize()) {  ?>
                                                 <div class="bestseller-wrapper">
                                                         <?php foreach ($products as $p) { ?>
                                                         <div class="inner-item">
@@ -108,7 +108,7 @@
                                         </div>
                                 </div>
                         </div>
-                        <!-- SPECIAL LIST END --> 
+                        <!-- SPECIAL LIST END -->
                 </div>
         </div>
 </div>
