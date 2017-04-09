@@ -146,6 +146,8 @@ button.button > span:after,
 .products-grid .item-inner .product-item-info .product-item-details .price-box .price-box { border: 0; padding: 0; }
 /*********  Footer Feature Image Section ***********/
 .footer-feature-wrapper { padding: 0 0 40px 0; }
+.footer-feature-wrapper .row{margin:0  -10px}
+.footer-widget-wrapper .row{margin:0  -10px}
 .footer-widget-wrapper { padding: 0 0 0px 0; }
 .footer-widget-wrapper .col-md-4:first-child { padding-left: 0; }
 .footer-widget-wrapper .col-md-4:last-child { padding-right: 0; }
