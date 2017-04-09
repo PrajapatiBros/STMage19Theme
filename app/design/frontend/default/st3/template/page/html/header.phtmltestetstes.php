@@ -39,7 +39,7 @@
         <div class="swipe-control"><i class="fa fa-align-justify"></i></div>
         <div class="top-search"><i class="fa fa-search"></i></div>
         <span class="clear"></span> </div>
-<div class="top-bar hidden-xs">
+<div class="top-bar">
         <div class="container">
                 <div class="header-panel-left">
                         <div class="skip-links"> <span href="#header-account" class="skip-link skip-account"></span></div>
