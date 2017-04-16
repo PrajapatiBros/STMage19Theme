@@ -1656,6 +1656,57 @@ button.button.submit:before {
  color: #fff;
 }
 
+/*************** checkout-onepage-index ******************/
+.checkout-onepage-index .col-main
+
+
+.checkout-onepage-index .col-main button.button,
+.checkout-onepage-success .col-main button.button,
+.sidebar button.button  {
+ background: none;
+ margin-left: 0;
+}
+.checkout-onepage-index .col-main button.button span,
+.checkout-onepage-success .col-main button.button span,
+.sidebar button.button span
+ {
+ background: #fff;
+ font-weight: normal;
+}
+.checkout-onepage-index .col-main button.button span span,
+.checkout-onepage-success .col-main button.button span span,
+.sidebar button.button span span{
+ border: 1px solid #edecec;
+}
+.checkout-onepage-index .col-main button.button span span:hover, 
+.checkout-onepage-index .col-main button.button span:hover span, 
+.checkout-onepage-index .col-main button.button:hover span span,
+.checkout-onepage-success .col-main button.button span span:hover, 
+.checkout-onepage-success .col-main button.button span:hover span, 
+.checkout-onepage-success .col-main button.button:hover span span,
+.sidebar button.button span span:hover, 
+.sidebar button.button span:hover span, 
+.sidebar button.button:hover span span
+
+ {
+ background: #454545;
+ border-color: #454545;
+ color: #fff;
+}
+.checkout-onepage-index  .opc .step-title .number{ background: #000; }
+.checkout-onepage-index .opc .active .step-title{ background: #757575; }
+.checkout-onepage-index #checkout-step-login h3,
+.checkout-onepage-index #checkout-step-login .col2-set > .col-1 h4,
+.checkout-onepage-index .form-list label.required em,
+.checkout-onepage-index .buttons-set p.required,
+.checkout-onepage-index #checkout-shipping-method-load .sp-methods dt,
+.customer-account-index .my-account .box .box-title h3,
+.customer-account-edit .fieldset .legend,
+.customer-account-edit  .form-list label.required em
+{ color: #333333; }
+
+
+.checkout-onepage-index .col2-set{ text-align: left; }
 /*************** Responsive Medi;ies ******************/
  /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) {
