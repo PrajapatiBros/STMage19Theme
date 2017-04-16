@@ -29,10 +29,67 @@
 <?php if($_product->isSaleable()): ?>
     <div class="add-to-cart">
         <?php if(!$_product->isGrouped()): ?>
-			<div class="qty-block">
-				<label for="qty"><?php echo $this->__('Qty:') ?></label>
-				<input type="text" name="qty" id="qty" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo $this->__('Qty') ?>" class="input-text qty" />
-			</div>
+			<div class="qty">
+    <label for="qty"><?php echo $this->__('Qty:') ?></label>
+    <a class="decrement_qty" href="javascript:void(0)" >
+        <div class="middle_icon_color pull-left">
+            <i class="fa fa-minus"></i>
+        </div>
+    </a>
+    <input id="qty" class="input-text qty" type="text" title="Qty" value="<?php echo $this->getProductDefaultQty() * 1 ?>" maxlength="12" name="qty" />
+    <a class="increment_qty" href="javascript:void(0)">
+        <div class="middle_icon_color pull-left">
+            <i class="fa fa-plus"></i>
+        </div>
+    </a>
+</div>
+        <?php endif; ?>
+        <button type="button" title="<?php echo $buttonTitle ?>" class="button btn-cart" onclick="productAddToCartForm.submit(this)"><span><span><?php echo $buttonTitle ?></span></span></button>
+        <?php echo $this->getChildHtml('', true, true) ?>
+    </div>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+  jQuery(document).ready(function(){
+    jQuery('.increment_qty').click(function() {
+      var oldVal = jQuery(this).parent().find("input").val();
+      if ( parseFloat(oldVal) >= 1 ) {
+        var newVal = parseFloat(oldVal) + 1;
+        jQuery(this).parent().find("input").val(newVal);
+      }
+    });
+ 
+    jQuery('.decrement_qty').click(function() {
+      var oldVal = jQuery(this).parent().find("input").val();
+      if ( parseFloat(oldVal) >= 2 ) {
+        var newVal = parseFloat(oldVal) - 1;
+        jQuery(this).parent().find("input").val(newVal);
+      }
+    });
+  });
+//]]>
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="add-to-cart" style="display: none;">
+        <?php if(!$_product->isGrouped()): ?>
+            <div class="qty-block">
+                <label for="qty"><?php echo $this->__('Qty:') ?>------------</label>
+                <input type="text" name="qty" id="qty" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo $this->__('Qty') ?>" class="input-text qty" />
+            </div>
         <?php endif; ?>
         <button type="button" title="<?php echo $buttonTitle ?>" class="button btn-cart" onclick="productAddToCartForm.submit(this)"><span><span><?php echo $buttonTitle ?></span></span></button>
         <?php echo $this->getChildHtml('', true, true) ?>

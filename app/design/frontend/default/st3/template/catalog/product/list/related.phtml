@@ -32,13 +32,13 @@
 
 
 
-<div class="block block-related">
+<div class="block block-related related-pro">
     <div class="block-title">
         <strong><span><?php echo $this->__('Related Products') ?></span></strong>
     </div>
     <div class="block-content">
         <!-- <p class="block-subtitle"><?php echo $this->__('Check items to add to the cart or') ?>&nbsp;<a href="#" onclick="selectAllRelated(this); return false;"><?php echo $this->__('select all') ?></a></p> -->
-        <ol class="mini-products-list products-grid" id="block-related">
+        <ol class="mini-products-list products-grid sa" id="block-related">
         <?php foreach($this->getItems() as $_item): ?>
             <li class="item" itemscope itemtype="http://schema.org/Product">
                <div class="item-inner">
@@ -49,15 +49,21 @@
                     <?php endif; ?>
                 <?php endif; ?> -->
                 <div class="product">
+                    <div class="mini-related-left">
                     <a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>" class="product-image" itemprop="url"><img src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize(90,138) ?>" alt="<?php echo $this->htmlEscape($_item->getName()) ?>" itemprop="image" /></a>
+                    </div>
+                    <div class="mini-related-right">
                     <p class="product-name"><a href="<?php echo $_item->getProductUrl() ?>" itemprop="name"><?php echo $this->htmlEscape($_item->getName()) ?></a></p>
                     <div class="product-details">
                         <?php echo $this->getPriceHtml($_item, true, '-related') ?>
+                        <div class="mini-btn-section">
                         <?php if ($this->helper('wishlist')->isAllow()) : ?>
-                            <a href="<?php echo $this->getAddToWishlistUrl($_item) ?>" class="link-wishlist"><?php echo $this->__('Add to Wishlist') ?></a>
+                            <a href="<?php echo $this->getAddToWishlistUrl($_item) ?>" class="link-wishlist"><?php echo $this->__('') ?></a>
                         <?php endif; ?>
-                        <div class="clear"></div>
-                        <a href="<?php echo $this->getAddToCartUrl($_item) ?>" class="link-cart"><?php echo $this->__('Add to Cart') ?></a>
+                        
+                        <a href="<?php echo $this->getAddToCartUrl($_item) ?>" class="link-cart"><?php echo $this->__('') ?></a>
+                        </div>
+                    </div>
                     </div>
                 </div>
                 </div></div>
