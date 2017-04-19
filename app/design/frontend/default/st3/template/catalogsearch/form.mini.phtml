@@ -31,7 +31,7 @@ $catalogSearchHelper =  $this->helper('catalogsearch');
 <div class="block_search">
 <form id="search_mini_form" action="<?php echo $catalogSearchHelper->getResultUrl() ?>" method="get">
     <div class="form-search">
-       <!-- <label for="search"><?php echo $this->__('Search:') ?></label>-->
+       <!-- <label for="search"><?php //echo $this->__('Search:') ?></label>-->
         <div class="control">
         <input id="search" type="text" name="<?php echo $catalogSearchHelper->getQueryParamName() ?>" value="<?php echo $catalogSearchHelper->getEscapedQueryText() ?>" class="input-text" maxlength="<?php echo $catalogSearchHelper->getMaxQueryLength();?>" />
         
@@ -42,7 +42,7 @@ $catalogSearchHelper =  $this->helper('catalogsearch');
         <div id="search_autocomplete" class="search-autocomplete"></div>
         <script type="text/javascript">
         //<![CDATA[
-            var searchForm = new Varien.searchForm('search_mini_form', 'search', '<?php echo Mage::helper('core')->jsQuoteEscape($this->__('Search entire store here...')) ?>');
+            var searchForm = new Varien.searchForm('search_mini_form', 'search', '<?php echo Mage::helper('core')->jsQuoteEscape($this->__('Search store here...')) ?>');
             searchForm.initAutocomplete('<?php echo $catalogSearchHelper->getSuggestUrl() ?>', 'search_autocomplete');
         //]]>
         </script>
