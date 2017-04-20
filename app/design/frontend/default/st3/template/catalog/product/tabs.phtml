@@ -73,7 +73,7 @@ foreach ($children as $cat) {
 			                <li class="item<?php if(($i-1)%$_columnCount==0): ?> first<?php elseif($i%$_columnCount==0): ?> last<?php endif; ?> col-item4" itemscope itemtype="http://schema.org/product">
 			                    <div class="item-inner">
 			                        <div class="product-item-info">
-			                                <div class="image-container"> <a  href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-item-photo" itemprop="url"><img  src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(270, 414); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" itemprop="image"/></a> </div>
+			                                <div class="image-container"> <a  href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-item-photo" itemprop="url"><img  src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(270, 270); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" itemprop="image"/></a> </div>
 			                                <div class="product-item-details">
 			                                        <div class="product-name">
 			                                                <h3 class="product-name"> <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>" itemprop="name">

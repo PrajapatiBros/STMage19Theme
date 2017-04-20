@@ -29,8 +29,8 @@ $zoomHeight     = intval($helper->getConfigData('zoom_height'));
 $bigImageWidth  = intval($helper->getConfigData('big_image_width'));
 $bigImageHeight = intval($helper->getConfigData('big_image_height'));
 
-$bigImageX  = 308;
-$bigImageY = 472;
+$bigImageX  = 500; //308;
+$bigImageY = 500; //472;
 
 $config = array(
     "position:'{$position}'",
@@ -38,7 +38,7 @@ $config = array(
     "titleOpacity:{$titleOpacity}",
     "lensOpacity:{$lensOpacity}",
 );
-    
+
 if ($position == 'inside') {
     $config[] = 'adjustX: -4,adjustY:-4';
 } elseif ($position == 'right') {
@@ -72,10 +72,10 @@ if ($zoomHeight) {
 
 <div class="product-box-customs">
     <?php if ($product->getImage() != 'no_selection' && $product->getImage()): ?>
-    
+
     <p class="product-image">
         <a  href='<?php echo $this->helper('catalog/image')->init($product, 'image')->resize($bigImageWidth, $bigImageHeight);?>' class = 'cloud-zoom' id='zoom1' rel="<?php echo implode($config, ',');?>">
-            
+
             <img class="big" id="image" src="<?php echo $this->helper('catalog/image')->init($product, 'image')->resize($bigImageX, $bigImageY);?>" alt='' title="<?php echo $this->htmlEscape($this->getImageLabel());?>" />
         </a>
     </p>
@@ -89,17 +89,17 @@ if ($zoomHeight) {
 
     <?php endif; ?>
     <?php if (count($this->getGalleryImages()) > 0): ?>
-    
+
          <?php if (count($this->getGalleryImages()) > 3)  {
             $carous='tumbSlider';
             $tumbSliderControl = '<a class="tumbSlider-prev fa fa-chevron-circle-left" href="#"></a>
             <a class="tumbSlider-next fa fa-chevron-circle-right" href="#"></a>';
-        } else 
-            {  
+        } else
+            {
                 $tumbSliderControl ='';
                 $carous='tumbSlider-none';
             } ?>
-    
+
     <div class="more-views">
         <h2><?php echo $this->__('More Views') ?></h2>
         <div class="container-slider">
@@ -129,6 +129,3 @@ if ($zoomHeight) {
         </div>
     <?php endif; ?>
 </div>
-
-
-
